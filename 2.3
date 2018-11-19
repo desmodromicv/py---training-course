@@ -1,0 +1,22 @@
+class Flower:
+    def __init__(self, colour, pot, spikes):
+        print('There is description of your flower: ')
+        self.colour = colour
+        self.pot = pot
+        self.spikes = spikes
+
+    def description_convert(self, pot, spikes):
+        self.pot = bool(pot)
+        self.spikes = bool(spikes)
+
+    def description_output(self, colour, pot, spikes):
+        print('\tYour flower is {}.\n\tNeed pot: {}.\n\tHas the spikes: {}.'.format(
+            self.colour, self.pot, self.spikes))
+
+colour = input('What colour is your flower? ')
+pot = input('This flower need pot? (1/0)')
+spikes = input('This flower has spikes? (1/0)')
+
+flower = Flower(colour, pot, spikes)
+flower.description_convert(pot, spikes)
+flower.description_output(colour, pot, spikes)
